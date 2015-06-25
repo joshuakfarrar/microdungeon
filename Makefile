@@ -7,4 +7,4 @@ all: ex17
 ex17: $(O_FILES)
 
 clean:
-	rm -f ex17
+	rm -f ex17 *.o
