@@ -12,6 +12,7 @@ int main(int argc, char * argv[]) {
 
 	attackRoom(room, 10);
 	attackRoom(room, 10);
+	attackRoom(room, 10);
 
 	return 0;
 }
