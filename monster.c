@@ -21,6 +21,7 @@ int attackMonster(struct Monster * monster, int damage) {
 		return 0;
 	} else {
 		printf("You killed %s!\n", monster->name);
+		destroyMonster(monster);
 		return 1;
 	}
 }

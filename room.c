@@ -1,15 +1,20 @@
-#ifndef ROOM_H
-#define ROOM_H
+#include <stdio.h>
+#include <stdlib.h>
+#include "room.h"
 
-#include "monster.h"
+struct Room * createRoom(char * name) {
+	struct Room * room = malloc(sizeof(struct Room));
 
-struct Room {
-	Monster * bad_guy;
+	room->name = name;
 
-	struct Room * north;
-	struct Room * south;
-	struct Room * east;
-	struct Room * west;
+	return room;
 }
 
-#endif
+int attackRoom(struct Room * room, int damage) {
+	if ( room->bad_guy ) {
+		return attackMonster(room->bad_guy, damage);
+	} else {
+		printf("There's nothing here!\n");
+		return 0;
+	}
+}
