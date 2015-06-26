@@ -25,3 +25,19 @@ int attackRoom(struct Room * room, int damage) {
 		return 0;
 	}
 }
+
+void lookRoom(struct Room * room) {
+	printf("\x1b[32m%s\x1b[0m\n", room->name);
+	printf("\x1b[30;1m-------------------------------------------------------\x1b[0m\n\n");
+
+	printf("You can go:");
+	if (room->north) printf(" north");
+	if (room->south) printf(" south");
+	if (room->east) printf(" east");
+	if (room->west) printf(" west");
+
+	
+	if (room->bad_guy) {
+		printf("\n\x1b[35;1mA %s stares you down\x1b[0m\n", room->bad_guy->name);
+	}
+}

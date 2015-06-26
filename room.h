@@ -16,5 +16,6 @@ struct Room {
 
 struct Room * createRoom(char * name);
 int attackRoom(struct Room * room, int damage);
+void lookRoom(struct Room * room);
 
 #endif

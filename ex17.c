@@ -23,12 +23,7 @@ int process_input(struct Map * game) {
 			mapMove(game, WEST);
 			break;
 		case 'l':
-			printf("%s\n\n", game->location->name);
-			printf("You can go:\n");
-			if (game->location->north) printf("NORTH\n");
-			if (game->location->south) printf("SOUTH\n");
-			if (game->location->east) printf("EAST\n");
-			if (game->location->west) printf("WEST\n");
+			lookRoom(game->location);
 			break;
 		case 'q':
 			return 0;
@@ -44,6 +39,8 @@ int main(int argc, char * argv[]) {
 	struct Map * game = createMap();
 
 	initMap(game);
+
+	lookRoom(game->location);
 
 	while(process_input(game)) {
 	}

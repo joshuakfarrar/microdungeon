@@ -12,10 +12,10 @@ struct Map * createMap() {
 
 void initMap(struct Map * map) {
 	// make rooms
-	struct Room * hall = createRoom("Great Hall");
-	struct Room * throne = createRoom("Throne Room");
-	struct Room * arena = createRoom("Arena");
-	struct Room * kitchen = createRoom("Kitchen");
+	struct Room * hall = createRoom("The Great Hall");
+	struct Room * throne = createRoom("The Throne Room");
+	struct Room * arena = createRoom("The Arena");
+	struct Room * kitchen = createRoom("The Kitchen");
 
 	// link rooms
 	hall->north = throne;
@@ -53,7 +53,7 @@ struct Room * mapMove(struct Map * map, Direction direction) {
 
 	if (next) {
 		map->location = next;
-		printf("You entered the %s.\n", map->location->name);
+		lookRoom(map->location);
 	}
 
 	return map->location;
