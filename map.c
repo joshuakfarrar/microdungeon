@@ -5,7 +5,7 @@
 #include "monster.h"
 
 struct Map * createMap() {
-	struct Map * map = malloc(sizeof(struct Map)); 
+	struct Map * map = malloc(sizeof(struct Map));
 
 	return map;
 }
@@ -22,7 +22,7 @@ void initMap(struct Map * map) {
 
 	throne->east = kitchen;
 	throne->south = hall;
-	throne->west = arena; 
+	throne->west = arena;
 
 	arena->east = throne;
 	kitchen->west = throne;

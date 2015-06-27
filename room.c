@@ -36,7 +36,6 @@ void lookRoom(struct Room * room) {
 	if (room->east) printf(" east");
 	if (room->west) printf(" west");
 
-	
 	if (room->bad_guy) {
 		printf("\n\x1b[35;1mA %s stares you down\x1b[0m\n", room->bad_guy->name);
 	}
