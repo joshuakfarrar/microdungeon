@@ -37,7 +37,7 @@ void initMap(struct Map * map) {
 }
 
 struct Room * mapMove(struct Map * map, Direction direction) {
-	struct Room * next;
+	struct Room * next = NULL;
 
 	if (direction == NORTH && map->location->north) {
 		next = map->location->north;
