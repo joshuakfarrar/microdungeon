@@ -1,6 +1,6 @@
 CFLAGS=-Wall
 
-O_FILES=monster.o room.o map.o
+O_FILES=mud.o monster.o room.o map.o
 
 all: ex17
 

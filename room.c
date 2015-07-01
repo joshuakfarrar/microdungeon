@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "mud.h"
 #include "room.h"
 #include "monster.h"
 
@@ -12,6 +13,7 @@ struct Room * createRoom(char * name) {
 }
 
 int attackRoom(struct Room * room, int damage) {
+        set_char_color( AT_PLAIN );
 	printf("Attacking room\n");
 	if (room->bad_guy != NULL) {
 		int result = attackMonster(room->bad_guy, damage);
